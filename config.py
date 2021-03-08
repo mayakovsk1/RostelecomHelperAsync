@@ -171,10 +171,11 @@ default_dictionary = {'Как провести интернет в дом или
     'Как отключить услугу': 'https://spb.rt.ru/support/phone/control/disable-service',
     'Как перенести услугу на другой адрес при переезде ': 'https://spb.rt.ru/support/phone/control/relocation',
     'Как изменить контактные данные': 'https://spb.rt.ru/support/phone/contract/change-my-contact-information'}
-from keywords import key_words
+
+import keywords
 if __name__ == '__main__':
     for i in dictionary:
         set_return = set()
-        for j in key_words(i):
+        for j in keywords.key_words(i):
             set_return.add(j)
         print(f"'{dictionary[i]}': {set_return}")
